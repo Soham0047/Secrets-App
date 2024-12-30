@@ -1,0 +1,201 @@
+/* Base Styling */
+body {
+  background-color: #0d1117;
+  font-family: 'Roboto', sans-serif;
+  color: #c9d1d9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Animated Background */
+body:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #1e1e2f, #15151f);
+  z-index: -1;
+  animation: gradientAnimation 10s infinite;
+}
+
+@keyframes gradientAnimation {
+  0%, 100% {
+    background: radial-gradient(circle, #1e1e2f, #15151f);
+  }
+  50% {
+    background: radial-gradient(circle, #15151f, #1e1e2f);
+  }
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header and Footer */
+header, footer {
+  background: #161b22;
+  padding: 20px 0;
+  color: #c9d1d9;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+p, a {
+  font-size: 1.1rem;
+  color: #c9d1d9;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #58a6ff;
+}
+
+/* Jumbotron Styling */
+.jumbotron {
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  background: #21262d;
+  color: #c9d1d9;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron h1 {
+  font-size: 2.5rem;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+}
+
+/* Forms */
+form {
+  margin: 1.5rem 0;
+}
+
+form input, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+  background: #161b22;
+  color: #c9d1d9;
+}
+
+form button {
+  background: #58a6ff;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #0070f3;
+}
+
+/* Button Styling */
+button, .btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-dark {
+  background: #21262d;
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background: #30363d;
+}
+
+.btn-light {
+  background: #ffffff;
+  color: #000;
+}
+
+.btn-light:hover {
+  background: #c9d1d9;
+  color: #161b22;
+}
+
+/* Secret Text */
+.secret-text {
+  color: #ffffff;
+  background-color: #0d1117;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: color 0.4s ease-in-out;
+}
+
+.secret-text:hover {
+  color: #1f6feb;
+  text-shadow: 0px 0px 10px #1f6feb;
+}
+
+/* Icons */
+.fas.fa-key {
+  animation: keyBounce 2s infinite;
+}
+
+@keyframes keyBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron {
+    padding: 2rem 1rem;
+  }
+
+  form input, form button {
+    font-size: 0.9rem;
+  }
+}

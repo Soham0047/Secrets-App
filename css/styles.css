@@ -1,0 +1,105 @@
+/* Base Styling */
+body {
+  background-color: #0d1117;
+  font-family: 'Roboto', sans-serif;
+  color: #c9d1d9;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Animated Background */
+body:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #1e1e2f, #15151f);
+  z-index: -1;
+  animation: gradientAnimation 10s infinite;
+}
+
+@keyframes gradientAnimation {
+  0%, 100% {
+    background: radial-gradient(circle, #1e1e2f, #15151f);
+  }
+  50% {
+    background: radial-gradient(circle, #15151f, #1e1e2f);
+  }
+}
+
+/* Button Styling */
+button, .btn {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-dark {
+  background: #161b22;
+  color: #c9d1d9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.btn-dark:hover {
+  background: #21262d;
+  transform: scale(1.05);
+}
+
+.btn-light {
+  background: #c9d1d9;
+  color: #161b22;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+.btn-light:hover {
+  background: #ffffff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Text Hover Effect */
+.secret-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+}
+
+.secret-text:hover {
+  color: #1f6feb;
+  text-shadow: 0px 0px 10px #1f6feb;
+}
+
+/* Container Animation */
+.container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Key Icon Animation */
+.fas.fa-key {
+  animation: keyBounce 2s infinite;
+}
+
+@keyframes keyBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
